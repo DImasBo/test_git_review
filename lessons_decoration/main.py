@@ -152,39 +152,40 @@ import random
 # end_time = time.perf_counter()
 # print(f"The execution time: {end_time - start_time:.8f} seconds")
 #
-#
+
 # start_time = time.perf_counter()
 # print(fibonacci(5))
 # end_time = time.perf_counter()
 # print(f"The execution time: {end_time - start_time:.8f} seconds")
-
-from functools import wraps
-import time
-
-def cache(func):
-    @wraps(func)
-    def wrapper(a):
-        cache_key = a
-        if cache_key in wrapper.cache:
-            return wrapper.cache[cache_key]
-        else:
-            res = func(a)
-            wrapper.cache[cache_key] = res
-        return res
-
-    wrapper.cache = {}
-    return wrapper
-
-
+#
+# from functools import wraps
+# import time
+#
+#
+# def cache(func):
+#     @wraps(func)
+#     def wrapper(a):
+#         cache_key = a
+#         if cache_key in wrapper.cache:
+#             return wrapper.cache[cache_key]
+#         else:
+#             res = func(a)
+#             wrapper.cache[cache_key] = res
+#         return res
+#
+#     wrapper.cache = {}
+#     return wrapper
+#
+#
 
 
 
 # @cache
-# def fibonacci(n):
-#     if n < 2:
-#         return n
-#     time.sleep(1)
-#     return fibonacci(n - 1) + fibonacci(n - 2)
+def fibonacci(n):
+    if n < 2:
+        return n
+    time.sleep(1)
+    return fibonacci(n - 1) + fibonacci(n - 2)
 
 # print(fibonacci.cache)
 #
