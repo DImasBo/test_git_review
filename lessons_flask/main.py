@@ -13,7 +13,10 @@ news_all = {
 
 @app.route("/")
 def hello():
-    return f"<h1>Hello, {name}</h1>"
+    news_text = ""
+    for key, val in news_all.items():
+        news_text += f'<a href="/news/{key}">{key}</a>'
+    return f"<h1>Hello, {name}</h1>"+ news_text
 
 
 @app.route("/news/<name_post>")
