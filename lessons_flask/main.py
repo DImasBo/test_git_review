@@ -24,6 +24,11 @@ def hello():
     return render_template("index.html", user=user)
 
 
+@app.route("/profile")
+def profile():
+    return render_template("profile.html", user=user)
+
+
 @app.route("/news/<index_post>")
 def news_post(index_post):
     index_post = int(index_post)

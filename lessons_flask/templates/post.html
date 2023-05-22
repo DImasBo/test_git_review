@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>News item</title>
+    <title>News {{ news.header }}</title>
     <style>
         .post{
             background-color: bisque;
@@ -12,6 +12,7 @@
     </style>
 </head>
 <body>
+
     <div class="post">
         <h3>{{ news.header }}</h3>
         <p>Автор: {{ news.author}}</p>
