@@ -1,7 +1,7 @@
 # # # OPP
-# # # class, -> object
+# # # class, -> objects
 # # # class - methods, parameters
-# # # __init__ - конструктор описуємо певні зарактеристи або інструкції
+# # # __init__ - конструктор описуємо певні характеристи або інструкції
 # # # from <name_module> import ClassName
 # # #
 # # # class Person:
@@ -80,7 +80,7 @@
 # # #
 # # # class Cat(Animal):
 # # #
-# # #     def say(self):
+# # #     def may(self):
 # # #         print("may")
 # # #
 # # #
@@ -174,14 +174,14 @@
 # # print(c.hobby)
 #
 # # полиморфизм
-# #
-# # a = 10
-# # s = "test"
-# # print(a+10)
-# #
-# # print(a)
-# # print(type(a))
-# # print(type(s))
+#
+# a = 10
+# s = "test"
+# print(a+10)
+#
+# print(a)
+# print(type(a))
+# # # print(type(s))
 #
 #
 # #
@@ -196,38 +196,46 @@
 # #
 # # print(b)
 #
-# #
-# # class Book:
-# #
-# #     def __init__(self, pages):
-# #         self.pages = pages
-# #
-# #     def test(self):
-# #         print()
-# #
-# #     def __add__(self, book2):
-# #         return Book(self.pages + book2.pages)
-# #
-# # b = Book()
-# # b.test()
-# #
-# # # obj1 = Book(50)
-# # # obj2 = Book(150)
-# # # obj3 = obj1 + obj2
-# # # print(obj3.pages)
-# #
-# #
-# #
-# # class Book:
-# #     def __init__(self, name):
-# #         self.name = name
-# #
-# #     def __str__(self):
-# #         return f"<Book: {self.name}>"
+#
+# class Book:
+#
+#     def __init__(self, pages):
+#         self.pages = pages
+#
+#     def test(self):
+#         print()
+#
+#     def __add__(self, book2):
+#         return Book(self.pages + book2.pages)
+#
+# # # b = Book()
+# # # b.test()
+#
+# obj1 = Book(50)
+# obj2 = Book(150)
+# obj3 = obj1 + obj2
+# print(obj3)
+
 # #
 # #
-# # book = Book("Енеїда")
-# # print(book)
+# class Book:
+#     def __init__(self, name, pages):
+#         self.name = name
+#         self.pages = pages
+#
+#     def __int__(self):
+#         return self.pages
+#     def __str__(self):
+#         return f"<Book: {self.name}>"
+# #
+# #
+# book = Book("Енеїда", 150)
+# print(book)
+# book = int(book)
+#
+# print(book)
+# print(type(book))
+
 # #
 # # a = 10
 # # print(a)
@@ -261,3 +269,4 @@
 # print(p.price)
 # print(p.name)
 # print(p.discount + 20)
+
