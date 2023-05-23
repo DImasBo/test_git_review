@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        Home My Site Flask
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="/static/my_style.css">
+
+</head>
+<body>
+    <h1>Home </h1>
+    {% block context %}
+        <p>test  my site</p>
+        <img width="500" src="/static/image.jpg" alt="test">
+        <ul>
+        {% for news in news_list %}
+
+                 <li><a href="/news/{{ loop.index0 }}">{{ news.name }}</a></li>
+        {% endfor %}
+        </ul>
+        <a href="/news/form/create/">стоврити новину</a>
+    {% endblock %}
+</body>
+</html>

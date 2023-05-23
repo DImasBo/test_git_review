@@ -1,4 +1,4 @@
-from flask import Blueprint, request
+from flask import Blueprint, request, render_template
 
 news_route = Blueprint("news", __name__, url_prefix="/news")
 
@@ -15,12 +15,10 @@ news_list = [
 def news(index_news):
     index_news = int(index_news)
     if index_news >= len(news_list):
-        return "<h1>такої новини немає у списку</h1>"
+        a = 1212 / 0
+        return "<h1>такої новини немає у списку</h1>", 404
     news = news_list[index_news]
-    return f"Новин на сайті {len(news_list)}" \
-           f"<h1>Новина: {news['name']}</h1>" \
-           f"<p>{news['context']}</p>"\
-           f"<p> <small>author:{news['author']}</small></p>"
+    return render_template("news_post.html", news=news)
 
 
 @news_route.route("/form/create/", methods=['GET'])

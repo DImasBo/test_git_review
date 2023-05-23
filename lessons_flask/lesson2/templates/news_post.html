@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+
+{% block title %}
+    Новина: {{ news.name }}
+{% endblock %}
+
+{% block context %}
+    <h2>Новина: {{ news.name }}</h2>
+    <p>{{ news.context }}</p>
+    <p> <small>author:{{ news.author }}</small></p>
+{% endblock %}
