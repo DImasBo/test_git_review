@@ -6,7 +6,8 @@ news_list = [
     {
         "name": "Призедент зустрівся з Байденом",
         "context": "опис фівафдільвдщлфіьвфюю ...",
-        "author": "ТСН"
+        "author": "ТСН",
+        "photo": "/static/presedent.jpeg"
     }
 ]
 
@@ -15,7 +16,6 @@ news_list = [
 def news(index_news):
     index_news = int(index_news)
     if index_news >= len(news_list):
-        a = 1212 / 0
         return "<h1>такої новини немає у списку</h1>", 404
     news = news_list[index_news]
     return render_template("news_post.html", news=news)
@@ -31,6 +31,8 @@ def create_news():
     <input name="context" type="text">
     <label>Автор</label>
     <input name="author" type="text">
+    <label>Фото</label>
+    <input name="photo" type="text">
     <input type="submit">
 </form>    
 """
