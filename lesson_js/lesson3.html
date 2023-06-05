@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+//lessons 3
+// function
+// Завдання 1
+// Обернене виведення списку
+// Напишіть функцію, яка приймає список і повертає новий список з елементи в оберненому порядку.
+
+function reverse_list(l){
+	// let new_list = []
+
+	// for(let i=l.length-1; i >= 0; i--){
+	// 	new_list.push(l[i]);
+	// }
+	let new_list = l.copyWithin()
+	return new_list.reverse();
+}
+
+let l = [1,2,3,4,5];
+
+
+// console.log("l",l);
+
+// let reversList = reverse_list(l)
+
+// console.log("reversList", reversList);
+
+// console.log("l",l);
+
+</script>
+
+    <script>
+
+      function reverseList(list) {
+
+        var reversedList = list.slice().reverse();
+
+        return reversedList;
+
+    }
+
+
+
+
+    var originalList = [1, 2, 3, 4, 5];
+
+    var reversedList = reverseList(originalList);
+
+
+
+
+    console.log("l:", originalList);
+
+    console.log("Reversed List:", reversedList);
+
+    console.log("l:", originalList);
+
+
+
+
+    </script>
+</body>
+</html>

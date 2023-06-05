@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lessons about HTML DOM</title>
+	<style type="text/css">
+		input {
+			padding: 5px;
+			margin: 5px;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<p id="Demo">Lesson about HTML DOM</p>
+
+	<div class="post">
+		<p id="context_post">asdflkmasdlk mflkasdm f;laskdnmf ;askln<br> mf;kajsdn fkj;wensfkj; awnesofkjlwasndm fk;lwesnm<br> folcawjsdkf mlwkdsmx alwskd </p>
+	</div>
+	<input type="text" name="search"  onfocus="search_on(this)" placeholder="search">
+
+	<button onclick="update_text()">update text</button>
+	<button onclick="hidden_post()">Hidden</button>
+
+
+<script type="text/javascript">
+//	let new_title = "<b>It Step";
+
+	// let h1 = document.getElementById("Demo");
+	// h1.innerHTML = new_title;
+	// let posts = document.getElementsByClassName("post");
+	// console.log(posts);
+	// for(i in posts)
+	// 	posts[i].style.background = "blue";
+
+	// console.log(h1);
+
+	function update_text(){
+		let el = document.getElementById("context_post");
+		el.innerHTML = "new postr test";
+	}
+
+
+	function search_on(self) {
+		self.style.background = "red";
+		console.log(self);
+	}
+
+
+	function hidden_post(){
+		let el = document.getElementsByClassName("post");
+		if (el[0].style.display == "block")
+			el[0].style.display = "none";
+		else
+			el[0].style.display = "block";
+
+	}
+
+</script>
+
+</body>
+</html>
