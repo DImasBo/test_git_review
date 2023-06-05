@@ -14,13 +14,15 @@
 	<p id="Demo">Lesson about HTML DOM</p>
 
 	<div class="post">
-		<p id="context_post">asdflkmasdlk mflkasdm f;laskdnmf ;askln<br> mf;kajsdn fkj;wensfkj; awnesofkjlwasndm fk;lwesnm<br> folcawjsdkf mlwkdsmx alwskd </p>
+		<p id="context_post">HEllo people </p>
+		
 	</div>
-	<input type="text" name="search"  onfocus="search_on(this)" placeholder="search">
+	<input type="text" name="name"  placeholder="name">
+	<button onclick="submit()">submit</button>
 
-	<button onclick="update_text()">update text</button>
-	<button onclick="hidden_post()">Hidden</button>
-
+	<input id='usd_field' type="number" name="dolars" placeholder="USD">
+	<button id='submit_calc_usd' onclick="submit()">submit</button>
+	
 
 <script type="text/javascript">
 //	let new_title = "<b>It Step";
@@ -34,26 +36,45 @@
 
 	// console.log(h1);
 
-	function update_text(){
-		let el = document.getElementById("context_post");
-		el.innerHTML = "new postr test";
+	// function update_text(){
+	// 	let el = document.getElementById("context_post");
+	// 	el.innerHTML = "new postr test";
+	// }
+
+	function submit(){
+		let name = document.getElementsByTagName("input")[0].value
+		let p = document.getElementById("context_post")
+		p.innerHTML = "Hello "+ name + "!!!!";
+	}
+
+	let button = document.getElementById("submit_calc_usd");
+
+	button.addEventListener("click", calculate_usd_to_uah)
+
+	function calculate_usd_to_uah(){
+		let usd_val = document.getElementById("usd_field").value;
+		
+		let p = document.getElementById("context_post")
+		p.innerHTML = usd_val * 37.5 + "uah";
+
 	}
 
 
-	function search_on(self) {
-		self.style.background = "red";
-		console.log(self);
-	}
+
+	// function search_on(self) {
+	// 	self.style.background = "red";
+	// 	console.log(self);
+	// }
 
 
-	function hidden_post(){
-		let el = document.getElementsByClassName("post");
-		if (el[0].style.display == "block")
-			el[0].style.display = "none";
-		else
-			el[0].style.display = "block";
+	// function hidden_post(){
+	// 	let el = document.getElementsByClassName("post");
+	// 	if (el[0].style.display == "block")
+	// 		el[0].style.display = "none";
+	// 	else
+	// 		el[0].style.display = "block";
 
-	}
+	// }
 
 </script>
 
